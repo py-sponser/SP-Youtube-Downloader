@@ -7,7 +7,7 @@ from sp_downloader_class import SPDownloader
 
 
 def get_args():
-    parser = ArgumentParser("Youtube Downloader")
+    parser = ArgumentParser("SP Youtube Downloader")
     parser.add_argument("-u", "--url", required=True, help="YouTube 'VIDEO/PLAYLIST' URL - "
                                                            "URL of a video must be given between quotations.")
     parser.add_argument("-p", "--path", default=".", help="PATH to save on disk - CWD is default.")
