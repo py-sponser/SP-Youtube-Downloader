@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 from sys import argv
-from downloader_class import SPDownloader
+from sp_downloader_class import SPDownloader
 
 
 # download specific videos from playlist by number
