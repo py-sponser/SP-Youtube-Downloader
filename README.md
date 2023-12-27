@@ -23,3 +23,7 @@
 - Download specific sequence/range from playlist by indexes shown on browser.
 - Download specific audios of videos from playlist by their indexes shown on browser.
 - Download full playlist as audios.
+
+[+] Packaging:
+> cd SP-Youtube-Downloader
+> pyinstaller sp_downloader.py --onefile
