@@ -206,7 +206,6 @@ class SPDownloader:
     def download_video(url, path, quality):
         video = YouTube(str(url), on_progress_callback=on_progress)
         quality_available = bool()
-        print(video.streams.get_highest_resolution().filesize_mb)
         yt = video.streams.get_highest_resolution()
         highest_quality = yt.resolution
         if quality:
