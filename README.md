@@ -25,5 +25,5 @@
 - Download full playlist as audios.
 
 [+] Packaging:
-> cd SP-Youtube-Downloader
-> pyinstaller sp_downloader.py --onefile
+`> cd SP-Youtube-Downloader`
+`> pyinstaller sp_downloader.py --onefile`
