@@ -12,6 +12,7 @@
 `> python sp_downloader.py -u '<playlist_url>' playlist -n -q 720 --range 5-20`<br />
 
 - Download full playlist as audios<br />
+`> python sp_downloader.py audio -h`<br />
 `> python sp_downloader.py -u '<playlist_url>' -p '<path>' audio --playlist`<br />
 
 [+] Python packages:
