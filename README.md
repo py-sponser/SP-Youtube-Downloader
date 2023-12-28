@@ -2,11 +2,13 @@
 
 [+] USAGE Examples:<br />
 `> pip install -r requirements.txt`<br />
-`> python sp_downloader.py -h`<br />
+- Download single video of '720p' quality
 `> python sp_downloader.py video -h`<br />
-`> python sp_downloader.py -u '<url>' -p '<path>' video --quality 720`<br />
-`> python sp_downloader.py -u '<url>' -p '<path>' playlist -n`<br />
-`> python sp_downloader.py -u '<url>' audio --playlist -V 1,5,6`<br />
+`> python sp_downloader.py -u '<video_url>' video --q 720`<br />
+
+- Download 5-20 range of videos within playlist of quality '720p' and add numbering prefixes to filenames.
+`> python sp_downloader.py playlist -h`<br />
+`> python sp_downloader.py -u '<playlist_url>' playlist -n -q 720 --range 5-20`<br />
 
 
 [+] Python packages:
