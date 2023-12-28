@@ -24,6 +24,6 @@
 - Download specific audios of videos from playlist by their indexes shown on browser.
 - Download full playlist as audios.
 
-[+] Packaging:
-`> cd SP-Youtube-Downloader`
-`> pyinstaller sp_downloader.py --onefile`
+[+] Packaging:<br />
+`> cd SP-Youtube-Downloader`<br />
+`> pyinstaller sp_downloader.py --onefile`<br />
