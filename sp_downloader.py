@@ -3,9 +3,6 @@ from sys import argv
 from sp_downloader_class import SPDownloader
 
 
-# download specific videos from playlist by number
-
-
 def get_args():
     parser = ArgumentParser("SP Youtube Downloader")
     parser.add_argument("-u", "--url", required=True, help="YouTube 'VIDEO/PLAYLIST' URL - "
