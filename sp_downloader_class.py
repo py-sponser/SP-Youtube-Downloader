@@ -142,6 +142,7 @@ class SPDownloader:
                     handler.download(path, filename=f"{file_name}.{video_extension}")
 
                     print("")
+                print(f"\n{Fore.GREEN}[+] Download is complete.{Fore.RESET}")
             except KeyboardInterrupt:
                 print(f"{Fore.RED}[-] Download has stopped - last downloaded video can be incomplete.{Fore.RESET}")
                 exit(0)
