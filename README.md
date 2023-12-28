@@ -1,5 +1,14 @@
 # SP Youtube-Downloader Console App
 
+[+] USAGE Examples:<br />
+`> pip install -r requirements.txt`<br />
+`> python sp_downloader.py -h`<br />
+`> python sp_downloader.py video -h`<br />
+`> python sp_downloader.py -u '<url>' -p '<path>' video --quality 720`
+`> python sp_downloader.py -u '<url>' -p '<path>' playlist -n`
+`> python sp_downloader.py -u '<url>' audio --playlist -V 1,5,6`
+
+
 [+] Python packages:
 - argparse
 - pytube
@@ -26,4 +35,5 @@
 
 [+] Packaging:<br />
 `> cd SP-Youtube-Downloader`<br />
+`> pip install -r requirements.txt`<br />
 `> pyinstaller sp_downloader.py --onefile`<br />
