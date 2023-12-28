@@ -1,8 +1,9 @@
 # SP Youtube-Downloader Console App
 
 [+] USAGE Examples:<br />
+- Install required python packages (Built-in packages should be already exist)
 `> pip install -r requirements.txt`<br />
-- Download single video of '720p' quality
+- Download single video of '720p' quality<br />
 `> python sp_downloader.py video -h`<br />
 `> python sp_downloader.py -u '<video_url>' video --q 720`<br />
 
