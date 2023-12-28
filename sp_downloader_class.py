@@ -126,8 +126,8 @@ class SPDownloader:
                 for num in numbers:
                     index = num-1
                     if num > playlist_length:
-                        print(f"\n{Fore.RED}[-] Video #{num} is not found - playlist has no index '{num}'.{Fore.RESET}")
-                        exit(0)
+                        print(f"\n{Fore.RED}[-] Video #{num} is not found - playlist has no index '{num}'.{Fore.RESET}\n")
+                        continue
 
                     videos[index].register_on_progress_callback(on_progress)
 
@@ -284,8 +284,8 @@ class SPDownloader:
                 for num in numbers:
                     index = num-1
                     if num > playlist_length:
-                        print(f"\n{Fore.RED}[-] Audio #{num} is not found - playlist has no index '{num}'.{Fore.RESET}")
-                        exit(0)
+                        print(f"\n{Fore.RED}[-] Audio #{num} is not found - playlist has no index '{num}'.{Fore.RESET}\n")
+                        continue
                     videos[index].register_on_progress_callback(on_progress)
 
                     handler = videos[index].streams.get_audio_only()

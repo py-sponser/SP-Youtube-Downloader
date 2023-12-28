@@ -1,13 +1,14 @@
 from argparse import ArgumentParser
 from sys import argv
 from sp_downloader_class import SPDownloader
+from os import getcwd
 
 
 def get_args():
     parser = ArgumentParser("SP Youtube Downloader")
     parser.add_argument("-u", "--url", required=True, help="YouTube 'VIDEO/PLAYLIST' URL - "
                                                            "URL of a video must be given between quotations.")
-    parser.add_argument("-p", "--path", default=".", help="PATH to save on disk - CWD is default.")
+    parser.add_argument("-p", "--path", default="", help="PATH to save on disk - CWD is default.")
 
     subparsers = parser.add_subparsers()
 
@@ -38,21 +39,30 @@ def get_args():
     return arguments, parser.print_help
 
 
-args, print_help = get_args()
-args.url = str(args.url)
+try:
+    args, print_help = get_args()
+    args.url = str(args.url)
 
-handler = SPDownloader()
+    handler = SPDownloader()
 
-if "video" in argv:
-    handler.download_video(url=args.url, path=args.path, quality=args.quality)
-elif "playlist" in argv:
-    handler.download_playlist(url=args.url, path=args.path, sequence=args.range, numbering=args.number_files,
-                              quality=args.quality, specific_videos=args.specific_videos)
-elif "audio" in argv:
-    if not args.playlist:
-        handler.download_single_audio(url=args.url, path=args.path)
+    path = args.path
+    if not path:
+        path = getcwd()
+
+    if "video" in argv:
+        handler.download_video(url=args.url, path=path, quality=args.quality)
+    elif "playlist" in argv:
+        handler.download_playlist(url=args.url, path=path, sequence=args.range, numbering=args.number_files,
+                                  quality=args.quality, specific_videos=args.specific_videos)
+    elif "audio" in argv:
+        if not args.playlist:
+            handler.download_single_audio(url=args.url, path=path)
+        else:
+            handler.download_audio_playlist(url=args.url, path=path, sequence=args.range,
+                                            specific_videos=args.specific_videos)
     else:
-        handler.download_audio_playlist(url=args.url, path=args.path, sequence=args.range,
-                                        specific_videos=args.specific_videos)
-else:
-    print_help()
+        print_help()
+
+except KeyboardInterrupt:
+    print("")
+    exit(0)
