@@ -28,12 +28,12 @@ def get_args():
                                     help="Specify only one quality/resolution. EX. 720 480 360 144 "
                                          "- DEFAULT is highest resolution.")
     playlist_subparser.add_argument("-V", "--specific-videos", help="Download specific videos from playlist - "
-                                                                    "EX. -l 1,6,24")
+                                                                    "EX. -V 1,6,24")
 
     audio_subparser = subparsers.add_parser("audio", help="Download type is audio.")
     audio_subparser.add_argument("--playlist", action="store_true", help="Download playlist as MP3 files.")
     audio_subparser.add_argument("-V", "--specific-videos", help="Download specific MP3 instances from playlist - "
-                                                                 "EX. -l 1,6,24")
+                                                                 "EX. -V 1,6,24")
     audio_subparser.add_argument("-r", "--range", help="Download specific sequence/range of audios of playlist videos. "
                                                        "EX. 5-20 of 40 playlist length.")
 
