@@ -43,3 +43,5 @@
 `> cd SP-Youtube-Downloader`<br />
 `> pip install -r requirements.txt`<br />
 `> pyinstaller sp_downloader.py --onefile`<br />
+`> cd dist && ls`<br />
+`> ./sp_downloader --help`<br />
