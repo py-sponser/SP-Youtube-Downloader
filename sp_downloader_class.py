@@ -1,5 +1,5 @@
 from colorama import Fore, Style
-from pytube import Playlist, YouTube, Stream
+from pytubefix import Playlist, YouTube, Stream
 from shutil import get_terminal_size
 from sys import stdout
 from os.path import join
@@ -96,7 +96,7 @@ class SPDownloader:
         playlist = Playlist(str(url))
 
         print(
-            f"\n\t\t{Fore.CYAN}{Style.BRIGHT}{playlist.owner} Channel - '{playlist.title}' playlist - {playlist.length} "
+            f"\n{Fore.CYAN}{Style.BRIGHT}{playlist.owner} Channel - '{playlist.title}' playlist - {playlist.length} "
             f"videos{Style.RESET_ALL}{Fore.RESET}\n")
         print(f"{Fore.BLUE}[+] Playlist download path >> {path}{Fore.RESET}")
         print("")
@@ -205,7 +205,7 @@ class SPDownloader:
 
     @staticmethod
     def download_video(url, path, quality):
-        video = YouTube(str(url), on_progress_callback=on_progress)
+        video = YouTube(str(url), on_progress_callback=on_progress, use_oauth=True, allow_oauth_cache=True)
         quality_available = bool()
         yt = video.streams.get_highest_resolution()
         highest_quality = yt.resolution
