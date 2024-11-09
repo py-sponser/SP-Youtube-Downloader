@@ -5,7 +5,7 @@
 `> pip install -r requirements.txt`<br />
 - Download single video of '720p' quality<br />
 `> python sp_downloader.py video -h`<br />
-`> python sp_downloader.py -u '<video_url>' video --q 720`<br />
+`> python sp_downloader.py -u '<video_url>' video -q 720`<br />
 
 - Download 5-20 range of videos within playlist of quality '720p' and add numbering prefixes to filenames.
 `> python sp_downloader.py playlist -h`<br />
