@@ -17,7 +17,7 @@
 
 [+] Python packages:
 - argparse
-- pytube
+- pytubefix
 - shutil
 - os
 - sys
